@@ -1,6 +1,7 @@
 import { Express, Request, Response } from "express";
+import { config } from "../configs/index";
 
-const APP_NAME = process.env.APP_NAME ?? "Express API";
+const APP_NAME = config.APP_NAME;
 
 const routes = (app: Express) => {
 	app.get("/", (req: Request, res: Response) => {
